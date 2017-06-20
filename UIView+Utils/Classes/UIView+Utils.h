@@ -36,7 +36,6 @@
 - (void)    removeAllSubviews;
 
 #pragma mark - transform
-CGRect  CGRectMoveToCenter(CGRect rect, CGPoint center);
 - (void) moveBy: (CGPoint) delta;
 - (void) scaleBy: (CGFloat) scaleFactor;
 - (void) fitInSize: (CGSize) aSize;
@@ -54,9 +53,5 @@ CGRect  CGRectMoveToCenter(CGRect rect, CGPoint center);
 - (void) orangeBorder;
 - (void) magentaBorder;
 - (void) borderByColor:(UIColor *)color;
-
-#pragma mark - class method
-
-+ (CAShapeLayer *)createCircleLayerWithWidth:(double)width about:(double)about;
 
 @end

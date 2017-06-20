@@ -10,6 +10,8 @@
 
 @implementation UIView (Utils)
 
+#pragma mark - frame
+
 - (CGFloat) left
 {
     return self.frame.origin.x;
@@ -133,7 +135,7 @@
 }
 
 
-#pragma mark subviews
+#pragma mark - subviews
 
 - (void)removeAllSubviews
 {
@@ -143,16 +145,8 @@
 }
 
 
-#pragma mark transform
+#pragma mark - transform
 
-CGRect CGRectMoveToCenter(CGRect rect, CGPoint center)
-{
-    CGRect newrect = CGRectZero;
-    newrect.origin.x = center.x-CGRectGetMidX(rect);
-    newrect.origin.y = center.y-CGRectGetMidY(rect);
-    newrect.size = rect.size;
-    return newrect;
-}
 
 - (void) moveBy: (CGPoint) delta
 {
@@ -242,15 +236,6 @@ CGRect CGRectMoveToCenter(CGRect rect, CGPoint center)
     }
     self.layer.borderColor = color.CGColor;
     self.layer.borderWidth = 1.f;
-}
-
-+ (CAShapeLayer *)createCircleLayerWithWidth:(double)width about:(double)about
-{
-    CAShapeLayer *circleShape = [CAShapeLayer layer];
-    double radius = width / 2.f;
-    UIBezierPath *circlePath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(radius, radius) radius:radius + about startAngle:0 endAngle:2 * M_PI clockwise:YES];
-    circleShape.path = [circlePath CGPath];
-    return circleShape;
 }
 
 
