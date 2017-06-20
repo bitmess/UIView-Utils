@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "bitmess" => "https://github.com/bitmess/UIView-Utils" }
   s.source       = { :git => "https://github.com/bitmess/UIView-Utils.git", :tag => "#{s.version}" }
-  s.source_files = "Classes", "Classes/**/*.{h,m}"
+  s.source_files = "UIView+Utils/Classes/**/*.{h,m}"
 
 end
